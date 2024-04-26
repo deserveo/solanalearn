@@ -5,8 +5,8 @@
 
 import { Connection, PublicKey, clusterApiUrl, LAMPORTS_PER_SOL } from "@solana/web3.js";
 
-const connection = new Connection(clusterApiUrl("devnet"));
-const address = new PublicKey('CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN');
+const connection = new Connection("https://rpc.ankr.com/solana_devnet", "confirmed");;
+const address = new PublicKey('DM5vhRHYeyqPm8uzsruLKbfjTNMcKGpvWVbjUGXB4iBB');
 const balance = await connection.getBalance(address);
 const balanceInSol = balance / LAMPORTS_PER_SOL;
 

@@ -17,16 +17,14 @@ import {
   
   const senderKeypair = getKeypairFromEnvironment("SECRET_KEY");
   
+
+  
   console.log(`suppliedToPubkey: ${suppliedToPubkey}`);
   
   const toPubkey = new PublicKey(suppliedToPubkey);
   
-  const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+  const connection = new Connection("https://rpc.ankr.com/solana_devnet", "confirmed");
   
-  console.log(
-    `✅ Loaded our own keypair, the destination public key, and connected to Solana`
-  );
-
   console.log(
     `✅ Loaded our own keypair, the destination public key, and connected to Solana`
   );
